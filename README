@@ -39,6 +39,17 @@ as dictated by your Python installation, run:
 
 Installation should be done as the root user if appropriate.
 
+Note that the package must exist in the base Python installation that
+mod_wsgi is configured to use. That is, the standard site-packages
+directory for the Python installation mod_wsgi is using, or a baseline
+Python virtual environment configured in mod_wsgi using WSGIPythonHome. The
+package cannot be installed in a secondary Python virtual environment
+referenced by the WSGIPythonPath directive, the python-path option to the
+WSGIDaemonProcess directive, or any which has been explicit added to
+sys.path within the WSGI application. This is because mod_wsgi will load
+the package at startup before any such secondary Python virtual
+environments have been added to sys.path.
+
 To cleanup after installation, run:
 
     make clean
