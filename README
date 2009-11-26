@@ -1,0 +1,52 @@
+===================
+Welcome to APSWIGPY
+===================
+
+Copyright 2007-2009 GRAHAM DUMPLETON
+
+The apswigpy package contains Python bindings for Apache server internals
+generated using SWIG.
+
+The bindings can be used in conjunction with mod_wsgi to get access to raw
+Apache API, bypassing the more restrictive WSGI interface.
+
+Installation (UNIX)
+===================
+
+To setup the package ready for building run the "configure" script.
+
+    ./configure
+
+The configure script takes the following optional arguments.
+
+  --with-apxs=NAME        name of the apxs executable [apxs]
+  --with-apr-config=NAME  name of the apr-config executable [apr-config]
+  --with-apu-config=NAME  name of the apu-config executable [apu-config]
+  --with-python=NAME      name of the python executable [python]
+  --with-swig=NAME        name of the swig executable [swig]
+
+The versions of Apache, APR, APR-UTIL and Python must all match what was
+used when version of mod_wsgi to be used was built.
+
+Once the package has been configured, it can be built by running:
+
+    make
+
+To install the Python package into the standard location for Python packages
+as dictated by your Python installation, run:
+
+    make install
+
+Installation should be done as the root user if appropriate.
+
+To cleanup after installation, run:
+
+    make clean
+
+If you need to build the module for a different version of Apache or
+Python, you should run:
+
+    make distclean
+
+and then rerun "configure" against the alternate version of Apache and
+Python before attempting to run "make" again.

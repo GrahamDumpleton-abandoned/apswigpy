@@ -1,0 +1,11 @@
+# use glob syntax.
+syntax: glob
+
+Makefile
+config.log
+config.status
+setup.py
+
+build/*
+apache/apache*/*.py
+apache/apache*/*.c
