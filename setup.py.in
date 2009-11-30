@@ -166,6 +166,11 @@ else:
 	)
 
     core.setup(
+        name="apache",
+        description="Python Wrappers Apache",
+        author="Graham Dumpleton",
+        author_email="Graham.Dumpleton@gmail.com",
+        url="http://bitbucket.org/grahamdumpleton/apswigpy/",
 	packages = packages,
 	ext_modules = extensions,
     )
