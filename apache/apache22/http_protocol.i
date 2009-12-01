@@ -14,6 +14,8 @@
 
 %feature("python:nondynamic","1");
 
+%import "apr.i"
+
 #define AP_DECLARE(type) type
 #define AP_DECLARE_NONSTD(type) type
 #define AP_DECLARE_DATA
